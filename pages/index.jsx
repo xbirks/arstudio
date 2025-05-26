@@ -2,33 +2,41 @@ import Head from 'next/head'
 import ButtonArrow from '../components/button';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import Script from 'next/script'
 
 
 
 
-export default function Home() {
+export default function Home() {  const [verMas, setVerMas] = useState(false)
+  const [scriptCargado, setScriptCargado] = useState(false)
 
-  const [verMas, setVerMas] = useState(false)
-  const [calendlyLoaded, setCalendlyLoaded] = useState(false)
+  // Para el inline, solo necesitas que el script esté cargado
+  const [inlineActivo, setInlineActivo] = useState(false)
 
   useEffect(() => {
-    if (document.querySelector('script[src*="calendly.com/assets/external/widget.js"]')) {
-      setCalendlyLoaded(true)
-      return
-    }
-
-    const script = document.createElement('script')
-    script.src = 'https://assets.calendly.com/assets/external/widget.js'
-    script.async = true
-    script.onload = () => setCalendlyLoaded(true)
-    document.body.appendChild(script)
+    setInlineActivo(true) // activa render en cliente, necesario para evitar hidratación rota
   }, [])
 
   const abrirCalendly = () => {
-    if (typeof window !== 'undefined' && window.Calendly) {
-      window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/ar-studio?hide_gdpr_banner=1&text_color=4b3828&primary_color=4b3828'
-      })
+    if (!scriptCargado) {
+      const script = document.createElement('script')
+      script.src = 'https://assets.calendly.com/assets/external/widget.js'
+      script.async = true
+      script.onload = () => {
+        setScriptCargado(true)
+        if (window.Calendly) {
+          window.Calendly.initPopupWidget({
+            url: 'https://calendly.com/ar-studio?hide_gdpr_banner=1&text_color=4b3828&primary_color=4b3828'
+          })
+        }
+      }
+      document.body.appendChild(script)
+    } else {
+      if (window.Calendly) {
+        window.Calendly.initPopupWidget({
+          url: 'https://calendly.com/ar-studio?hide_gdpr_banner=1&text_color=4b3828&primary_color=4b3828'
+        })
+      }
     }
   }
 
@@ -152,23 +160,27 @@ export default function Home() {
 
 
         <section className="reservas__master">
-
           <div className="reservas__title">
-          <h2>Agenda abierta.<br></br>Espacio preparado.</h2>
-          <p>Puedes leer las condiciones de nuestros servicios aquí:</p>
-          <ButtonArrow texto="CONDICIONES" href="https://calendly.com/" />
+            <h2>Agenda abierta.<br />Espacio preparado.</h2>
+            <p>Puedes leer las condiciones de nuestros servicios aquí:</p>
+            <ButtonArrow texto="CONDICIONES" href="https://calendly.com/" />
+            <ButtonArrow texto="RESERVAR" onClick={abrirCalendly} />
           </div>
 
-
-          
-        {calendlyLoaded && (
-          <div
-            className="calendly-inline-widget"
-            data-url="https://calendly.com/ar-studio?hide_gdpr_banner=1&text_color=4b3828&primary_color=4b3828"
-            style={{ minWidth: '320px', height: '630px' }}
-          ></div>
-        )}
-
+          {/* El script se carga solo si mostramos inline */}
+          {inlineActivo && (
+            <>
+              <Script
+                src="https://assets.calendly.com/assets/external/widget.js"
+                strategy="afterInteractive"
+              />
+              <div
+                className="calendly-inline-widget"
+                data-url="https://calendly.com/ar-studio"
+                style={{ minWidth: '320px', height: '700px' }}
+              />
+            </>
+          )}
         </section>
 
 
