@@ -21,6 +21,10 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -279,7 +283,7 @@ strong{
   display: flex;
   padding-left: 3vw;
   padding-right: 3vw;
-  margin-top: 150px;
+  margin-top: 200px;
   justify-content: space-between;
     max-width: 1400px;
   margin-left: auto;
@@ -433,6 +437,35 @@ strong{
 
 
 
+
+
+
+//INSTAGRAM
+
+.instagram__master{
+
+  padding-left: 3vw;
+  padding-right: 3vw;
+  margin-top: 200px;
+
+  h2{
+      text-align: left;
+      font-family: $aktiv;
+      color: $brown;
+      font-size: 2.5rem;
+      letter-spacing: -3px;
+      font-weight: 200;
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+      line-height: 3rem;
+      margin-top: 60px;
+      
+  }
+
+}
+
+
+
 //CALENDLY
 
 .reservas__master{
@@ -455,8 +488,9 @@ strong{
      top: 0;
 
     @include media900px {
-      position: relative;
+      position: inherit;
       margin-bottom: 5rem;
+      top: 0;
     }
 
        h2{
@@ -473,6 +507,11 @@ strong{
 
       position: sticky;
       top: 150px;
+
+     @include media900px {
+      position: inherit;
+      top: none;
+    }
 
       
   }
@@ -496,12 +535,19 @@ strong{
     @include media900px {
       width: 100%;
       max-width: 100%;
+      position:inherit;
+      top: none;
     }
   }
 
   .button{
     position: sticky;
     top: 340px;
+
+         @include media900px {
+      position:inherit;
+      top: none;
+    }
   }
   }
 
@@ -511,14 +557,121 @@ strong{
 .calendly-inline-widget{
   width: 50vw;
   max-width: 700px;
-  height: 1600px;
+  height: 1700px;
+
+        @include media1300px {
+      height: 1850px;
+    }
 
       @include media900px {
+      height: 1900px;
       width: 100%;
+      max-width: 100%;
+    }
+
+     @include media500px {
+      height: 2100px;
+    }
+
+    @include media390px {
+      height: 2400px;
     }
 }
 
 
-body{
-  height: 5000px;
+
+
+//DUDAS
+
+.dudas__master{
+  background-color: $beige;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  padding: 1vw;
+  align-items: center;
+
+  h3{
+     text-align: left;
+      font-family: $aktiv;
+      color: $brown;
+      font-size: 1.3rem;
+      letter-spacing: -1px;
+      font-weight: 200;
+      text-transform: uppercase;
+      margin-top: 10px;
+  }
+}
+
+
+
+
+//DETALLES
+
+.detalles__master{
+  margin-top: 200px;
+  padding-left: 3vw;
+  padding-right: 3vw;
+
+  h2{
+      text-align: left;
+      font-family: $aktiv;
+      color: $brown;
+      font-size: 2.5rem;
+      letter-spacing: -3px;
+      font-weight: 200;
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+      line-height: 3rem;
+    }
+
+    .detalles__cubo{
+      background-color: $brown;
+      width: 330px;
+      height: 400px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition:  0.3s ease-in-out;
+
+        &:hover{
+          background-color: $beige;
+          transition:  0.3s ease-in-out;
+        } &:hover h3{
+          color: $brown;
+          transition:  0.3s ease-in-out;
+        } &:hover p{
+          color: $brown;
+          transition:  0.3s ease-in-out;
+        } 
+
+      h3{
+      text-align: left;
+      font-family: $aktiv;
+      color: $white;
+      font-size: 1.5rem;
+      letter-spacing: -1px;
+      font-weight: 200;
+      text-transform: uppercase;
+      margin-top: 10px;
+      }
+
+      .detalles__logo{
+        width: 230px;
+      }
+
+      p{
+        font-family: $aktiv;
+        color: $white;
+        font-size: 0.9rem;
+        letter-spacing: -0.5px;
+        font-weight: 200;
+        line-height: 1.2rem;
+        text-transform: uppercase;
+        text-align: justify;
+        max-width: 50vw;
+      }
+    }
 }

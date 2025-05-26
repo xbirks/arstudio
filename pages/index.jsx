@@ -2,7 +2,7 @@ import Head from 'next/head'
 import ButtonArrow from '../components/button';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import Script from 'next/script'
+import Script from 'next/script';
 
 
 
@@ -39,6 +39,14 @@ export default function Home() {  const [verMas, setVerMas] = useState(false)
       }
     }
   }
+
+
+
+    const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
 
 
@@ -159,12 +167,36 @@ export default function Home() {  const [verMas, setVerMas] = useState(false)
 
 
 
+        <section className="instagram__master">
+
+          <h2>Un espacio<br></br>multifuncional.</h2>
+
+          {mounted && (
+        <>
+          <Script
+            src="https://cdn.lightwidget.com/widgets/lightwidget.js"
+            strategy="afterInteractive"
+          />
+          <iframe
+            src="https://cdn.lightwidget.com/widgets/5e630775b3f953a3a97e88d77f875eca.html"
+            scrolling="no"
+            allowTransparency={true}
+            className="lightwidget-widget"
+            style={{ width: '100%', border: 0, overflow: 'hidden' }}
+          />
+        </>
+      )}
+
+        </section>
+
+
+
+
         <section className="reservas__master">
           <div className="reservas__title">
             <h2>Agenda abierta.<br />Espacio preparado.</h2>
             <p>Puedes leer las condiciones de nuestros servicios aquí:</p>
             <ButtonArrow texto="CONDICIONES" href="https://calendly.com/" />
-            <ButtonArrow texto="RESERVAR" onClick={abrirCalendly} />
           </div>
 
           {/* El script se carga solo si mostramos inline */}
@@ -177,10 +209,29 @@ export default function Home() {  const [verMas, setVerMas] = useState(false)
               <div
                 className="calendly-inline-widget"
                 data-url="https://calendly.com/ar-studio"
-                style={{ minWidth: '320px', height: '700px' }}
               />
             </>
           )}
+        </section>
+
+        <div className="dudas__master">
+          <h3>¿Tienes alguna duda?</h3>
+          <ButtonArrow texto="CORREO" href="https://calendly.com/"></ButtonArrow>
+
+        </div>
+
+
+
+
+        <section className="detalles__master">
+
+          <h2>Detalles que completan<br></br>la experiencia</h2>
+
+          <div className="detalles__cubo">
+            <h3>Modelos<br></br>disponibles</h3>
+            <img className="detalles__logo" src="/assets/AR_Agency_vert.svg" alt="AR Agency logo for contract models across AR Studio" />
+            <p>Perfiles diversos y preparados, disponibles para potenciar tus producciones. Profesionales con experiencia y presencia.</p>
+          </div>
         </section>
 
 
