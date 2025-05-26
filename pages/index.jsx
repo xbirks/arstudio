@@ -8,28 +8,22 @@ import { useEffect } from 'react';
 
 export default function Home() {
 
-    const [verMas, setVerMas] = useState(false);
-
-      useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://assets.calendly.com/assets/external/widget.js';
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
-
-
-
+  const [verMas, setVerMas] = useState(false)
+  const [calendlyLoaded, setCalendlyLoaded] = useState(false)
 
   useEffect(() => {
+    if (document.querySelector('script[src*="calendly.com/assets/external/widget.js"]')) {
+      setCalendlyLoaded(true)
+      return
+    }
+
     const script = document.createElement('script')
     script.src = 'https://assets.calendly.com/assets/external/widget.js'
     script.async = true
+    script.onload = () => setCalendlyLoaded(true)
     document.body.appendChild(script)
-
-    setShowCalendly(true)
   }, [])
 
-  // ✅ Esta función debe estar dentro del componente
   const abrirCalendly = () => {
     if (typeof window !== 'undefined' && window.Calendly) {
       window.Calendly.initPopupWidget({
@@ -37,6 +31,7 @@ export default function Home() {
       })
     }
   }
+
 
 
   return (
@@ -166,13 +161,13 @@ export default function Home() {
 
 
           
-          {showCalendly && (
-            <div
-              className="calendly-inline-widget"
-              data-url="https://calendly.com/ar-studio?hide_gdpr_banner=1&text_color=4b3828&primary_color=4b3828"
-              style={{ minWidth: '320px', height: '630px' }}
-            ></div>
-          )}
+        {calendlyLoaded && (
+          <div
+            className="calendly-inline-widget"
+            data-url="https://calendly.com/ar-studio?hide_gdpr_banner=1&text_color=4b3828&primary_color=4b3828"
+            style={{ minWidth: '320px', height: '630px' }}
+          ></div>
+        )}
 
         </section>
 
