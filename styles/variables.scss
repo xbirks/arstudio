@@ -1,0 +1,139 @@
+@import url("https://use.typekit.net/cbv1cvv.css");
+
+/* VARIABLES */
+
+$brown: #4b3828;
+$white: #ffffff;
+$beige: #d4c4b2;
+$destacado: #e7c86d;
+$aktiv: "aktiv-grotesk", Arial, Helvetica, sans-serif;
+$fuente-p: 14pt;
+$transition-short: 0.2s;
+
+
+
+
+//MIXINS RESPONSIVE
+
+@mixin media2200px {
+    @media only screen and (max-width: 2200px) {
+      @content;
+    }
+  }
+  
+  
+  @mixin media1730px {
+    @media only screen and (max-width: 1730px) {
+      @content;
+    }
+  }
+  
+  @mixin media1458px {
+    @media only screen and (max-width: 1458px) {
+      @content;
+    }
+  }
+  
+  @mixin media1390px {
+    @media only screen and (max-width: 1390px) {
+      @content;
+    }
+  }
+  
+  @mixin media1200px {
+    @media only screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+  
+  @mixin media1000px {
+    @media only screen and (max-width: 1000px) {
+      @content;
+    }
+  }
+
+    @mixin media900px {
+    @media only screen and (max-width: 900px) {
+      @content;
+    }
+  }
+  
+  @mixin media800px {
+    @media only screen and (max-width: 800px) {
+      @content;
+    }
+  }
+  
+  @mixin media700px {
+    @media only screen and (max-width: 700px) {
+      @content;
+    }
+  }
+  
+  @mixin media600px {
+      @media only screen and (max-width: 600px) {
+        @content;
+      }
+    }
+  
+    @mixin media500px {
+      @media only screen and (max-width: 500px) {
+        @content;
+      }
+    }
+  
+    @mixin media390px {
+      @media only screen and (max-width: 390px) {
+        @content;
+      }
+    }
+  
+    @mixin media300px {
+      @media only screen and (max-width: 300px) {
+        @content;
+      }
+    }
+
+
+      //VERTICAL MIXIN
+      @mixin alto900px {
+      @media screen and (orientation: landscape) and (max-height: 900px) {
+        @content;
+      }
+    }
+
+      @mixin alto700px {
+      @media screen and (orientation: landscape) and (max-height: 700px) {
+        @content;
+      }
+    }
+
+          @mixin alto400px {
+      @media screen and (orientation: landscape) and (max-height: 400px) {
+        @content;
+      }
+    }
+    
+
+
+
+
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+a{
+  all: unset;
+  cursor: pointer;
+}
+
+::-moz-selection {
+  background: $destacado;
+  color: $brown;
+}
+::selection {
+  background: $destacado;
+  color: $brown;
+}
