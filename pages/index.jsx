@@ -3,6 +3,7 @@ import ButtonArrow from '../components/button';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import Script from 'next/script';
+import Link from 'next/link';
 
 
 
@@ -195,7 +196,7 @@ export default function Home() {  const [verMas, setVerMas] = useState(false)
         <section className="reservas__master">
           <div className="reservas__title">
             <h2>Agenda abierta.<br />Espacio preparado.</h2>
-            <p>Puedes leer las condiciones de nuestros servicios aquí:</p>
+            <p id="reserva">Puedes leer las condiciones de nuestros servicios aquí:</p>
             <ButtonArrow texto="CONDICIONES" href="https://calendly.com/" />
           </div>
 
@@ -227,12 +228,15 @@ export default function Home() {  const [verMas, setVerMas] = useState(false)
 
           <h2>Detalles que completan<br></br>la experiencia</h2>
 
-          <div className="detalles__cubo">
+          <Link href="https://ariannyrivasagency.com"><div className="detalles__cubo">
             <h3>Modelos<br></br>disponibles</h3>
             <img className="detalles__logo" src="/assets/AR_Agency_vert.svg" alt="AR Agency logo for contract models across AR Studio" />
             <p>Perfiles diversos y preparados, disponibles para potenciar tus producciones. Profesionales con experiencia y presencia.</p>
-          </div>
+          </div></Link>
         </section>
+
+
+        <div className="button__cierre"><ButtonArrow texto="RESERVAR" onClick={abrirCalendly} /></div>
 
 
       </main>

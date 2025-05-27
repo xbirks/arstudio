@@ -35,12 +35,17 @@ export default function Header() {
           <img className="header__instagram" src="/assets/instagram.svg" alt="AR Studio" />
         </Link>
 
-        <button className="header__menu" aria-label="Menú">
-          <svg width="29" height="24" viewBox="0 0 100 80" fill="#4b3828">
-            <rect width="100" height="4" />
-            <rect y="70" width="100" height="4" />
-          </svg>
-        </button>
+        <a
+            href="https://calendly.com/ar-studio"
+            className="header__menu"
+            aria-label="Menú"
+          >
+            <svg width="29" height="24" viewBox="0 0 100 80" fill="#4b3828">
+              <rect width="100" height="4" />
+              <rect y="70" width="100" height="4" />
+            </svg>
+          </a>
+
       </div>
     </header>
   );

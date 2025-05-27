@@ -1,6 +1,7 @@
 import '../styles/style.scss'
 import Head from 'next/head'
-import Header from '../components/header.jsx'
+import Header from '../components/header.jsx';
+import Footer from '../components/footer.jsx';
 
 
 export default function MyApp({ Component, pageProps }) {
@@ -19,6 +20,7 @@ export default function MyApp({ Component, pageProps }) {
     </Head>
       <Header />
       <Component {...pageProps} />
+      <Footer></Footer>
     </>
   )
 }
