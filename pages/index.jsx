@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import Script from 'next/script';
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 
@@ -105,7 +106,7 @@ export default function Home() {  const [verMas, setVerMas] = useState(false)
 
         <section className="datos__master">
 
-          <img className="datos__portada" src="/media/studio-2.jpg" alt="el estudio de Arianny Rivas en Valencia cuenta con un fondo blanco y numerosos equipos para la iluminación profesional" loading="lazy" decoding="async"></img>
+          <Image className="datos__portada" src="/media/studio-2.jpg" alt="el estudio de Arianny Rivas en Valencia cuenta con un fondo blanco y numerosos equipos para la iluminación profesional" loading="lazy" decoding="async" width={400} height={400}></Image>
 
           <div className="datos__content">
 
@@ -113,7 +114,7 @@ export default function Home() {  const [verMas, setVerMas] = useState(false)
 
             <div className="datos__map">
 
-              <img className="map" src="/media/mapa.jpg" alt="mapa del estudio de Arianny Rivas. Todo el espacio medido y explicado para que el cliente pueda comprenderlo antes de ir" loading="lazy" decoding="async"></img>
+              <Image className="map" src="/media/mapa.jpg" alt="mapa del estudio de Arianny Rivas. Todo el espacio medido y explicado para que el cliente pueda comprenderlo antes de ir" loading="lazy" decoding="async" width={300} height={300}></Image>
 
 
                  <dl className={`datos__list ${verMas ? 'abierto' : 'reducido'}`}>
@@ -230,7 +231,7 @@ export default function Home() {  const [verMas, setVerMas] = useState(false)
 
           <Link href="https://ariannyrivasagency.com"><div className="detalles__cubo">
             <h3>Modelos<br></br>disponibles</h3>
-            <img className="detalles__logo" src="/assets/AR_Agency_vert.svg" alt="AR Agency logo for contract models across AR Studio" />
+            <Image className="detalles__logo" src="/assets/AR_Agency_vert.svg" alt="AR Agency logo for contract models across AR Studio" width={400} height={100} />
             <p>Perfiles diversos y preparados, disponibles para potenciar tus producciones. Profesionales con experiencia y presencia.</p>
           </div></Link>
         </section>

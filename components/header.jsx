@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Header() {
 
@@ -16,7 +17,7 @@ export default function Header() {
   
   return (
     <header className="header__master">
-      <Link href="/"><img className="header__logo" src="/assets/AR_Studio.svg" alt="AR Studio" /></Link>
+      <Link href="/"><Image  width={400} height={50} className="header__logo" src="/assets/AR_Studio.svg" alt="AR Studio" /></Link>
 
       <nav className="header__nav">
         <Link href="#espacio">ESPACIO</Link>
@@ -32,7 +33,7 @@ export default function Header() {
           className="header__instagram"
           aria-label="Instagram"
         >
-          <img className="header__instagram" src="/assets/instagram.svg" alt="AR Studio" />
+          <Image className="header__instagram" src="/assets/instagram.svg" alt="AR Studio"  width={50} height={50}/>
         </Link>
 
         <a
