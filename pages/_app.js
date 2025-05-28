@@ -2,6 +2,7 @@ import '../styles/style.scss'
 import Head from 'next/head'
 import Header from '../components/header.jsx';
 import Footer from '../components/footer.jsx';
+import CookieConsent from '../components/CookieConsent.jsx';
 
 
 export default function MyApp({ Component, pageProps }) {
@@ -19,6 +20,7 @@ export default function MyApp({ Component, pageProps }) {
         ></script>
     </Head>
       <Header />
+      <CookieConsent />
       <Component {...pageProps} />
       <Footer></Footer>
     </>

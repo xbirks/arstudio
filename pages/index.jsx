@@ -197,7 +197,7 @@ export default function Home() {  const [verMas, setVerMas] = useState(false)
           <div className="reservas__title">
             <h2>Agenda abierta.<br />Espacio preparado.</h2>
             <p id="reserva">Puedes leer las condiciones de nuestros servicios aquí:</p>
-            <ButtonArrow texto="CONDICIONES" href="https://calendly.com/" />
+            <ButtonArrow texto="CONDICIONES" href="/condiciones" />
           </div>
 
           {/* El script se carga solo si mostramos inline */}
@@ -217,7 +217,7 @@ export default function Home() {  const [verMas, setVerMas] = useState(false)
 
         <div className="dudas__master">
           <h3>¿Tienes alguna duda?</h3>
-          <ButtonArrow texto="CORREO" href="https://calendly.com/"></ButtonArrow>
+          <ButtonArrow texto="CORREO" href="mailto:arstudiospain@gmail.com"></ButtonArrow>
 
         </div>
 

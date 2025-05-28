@@ -781,3 +781,246 @@ strong{
   justify-content: center;
   margin-top: 200px;
 }
+
+
+
+
+
+
+
+
+
+//CONDICIONES
+
+.condiciones__master{
+  margin-top: 100px;
+  margin-left: 3vw;
+  margin-right: 3vw;
+
+  h1 {
+      font-family: $aktiv;
+      color: $brown;
+      font-size: 3.5rem;
+      letter-spacing: -4px;
+      font-weight: 200;
+      max-width: 50vw;
+      width: 600px;
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+
+        @include media900px {
+          width: 90%;
+          max-width: 100%;
+        }
+
+        @include media500px {
+          font-size: 2.5rem;
+          letter-spacing: -3px;
+          line-height: 3rem;
+        }
+    }
+
+  h2{
+         text-align: left;
+      font-family: $aktiv;
+      color: $beige;
+      font-size: 1.3rem;
+      letter-spacing: -1px;
+      font-weight: 200;
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+  }
+
+
+    ul{
+
+      li{
+        margin-bottom: 10px;
+        font-family: $aktiv;
+        color: $brown;
+        font-size: 0.9rem;
+        letter-spacing: -0.2px;
+        font-weight: 200;
+        line-height: 1.4rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        text-align: justify;
+        max-width: 700px;
+      }
+  }
+}
+
+
+
+
+
+//LEGAL
+
+.legal__master{
+  margin-top: 100px;
+  margin-left: 3vw;
+  margin-right: 3vw;
+
+  h1 {
+      font-family: $aktiv;
+      color: $brown;
+      font-size: 3.5rem;
+      letter-spacing: -4px;
+      font-weight: 200;
+      max-width: 50vw;
+      width: 600px;
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+
+        @include media900px {
+          width: 90%;
+          max-width: 100%;
+        }
+
+        @include media500px {
+          font-size: 2.5rem;
+          letter-spacing: -3px;
+          line-height: 3rem;
+        }
+    }
+
+  h2{
+         text-align: left;
+      font-family: $aktiv;
+      color: $beige;
+      font-size: 1.3rem;
+      letter-spacing: -1px;
+      font-weight: 200;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      margin-top: 5rem;
+  }
+
+
+    ul{
+
+      li{
+        margin-bottom: 10px;
+        font-family: $aktiv;
+        color: $brown;
+        font-size: 0.9rem;
+        letter-spacing: -0.2px;
+        font-weight: 200;
+        line-height: 1.4rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        text-align: justify;
+        max-width: 700px;
+      }
+  }
+}
+
+
+
+
+
+//COOKIES
+
+.cookie-consent{
+  background-color: $beige;
+  position: fixed;
+  bottom: 100px;
+  right: 3vw;
+  max-width: 400px;
+  padding: 50px;
+  z-index: 1000;
+
+        opacity: 0;
+        animation: fadeIn 2s ease forwards;
+      
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          bottom: -200px;
+        }
+        to {
+          opacity: 1;
+          bottom: 100px;
+        }
+      }
+
+
+          @include media600px {
+            max-width: 100%;
+            right: inherit;
+            bottom: 100px;
+            margin-left: 3vw;
+            margin-right: 3vw;
+        }
+
+  p{
+        margin-bottom: 10px;
+        font-family: $aktiv;
+        color: $brown;
+        font-size: 0.9rem;
+        letter-spacing: -0.2px;
+        font-weight: 200;
+        line-height: 1.4rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        text-align: justify;
+        max-width: 700px;
+  }
+
+  .cookie-consent__actions{
+    display: flex;
+    justify-content: space-between;
+
+        @include media600px {
+          display: grid;
+          flex-direction: column;
+          gap: 10px;
+        }
+
+
+    .cookie-consent__button--accept{
+      background-color: $white;
+      padding: 5px;
+      font-family: $aktiv;
+      color: $brown;
+      font-size: 1rem;
+      letter-spacing: -0.2px;
+      font-weight: 200;
+      line-height: 1.4rem;
+      text-transform: uppercase;
+      text-align: justify;
+      padding-top: 8px;
+      padding-left: 8px;
+      padding-right: 8px;
+
+        &:hover{
+          background-color: $brown;
+          color: $beige;
+        }
+
+    }
+
+        .cookie-consent__button--reject{
+      background-color: rgb(112, 35, 35);
+      padding: 5px;
+      font-family: $aktiv;
+      color: $white;
+      font-size: 1rem;
+      letter-spacing: -0.2px;
+      font-weight: 200;
+      line-height: 1.4rem;
+      text-transform: uppercase;
+      text-align: justify;
+      padding-top: 8px;
+      padding-left: 8px;
+      padding-right: 8px;
+
+        &:hover{
+          background-color: rgb(156, 30, 30);
+          color: $beige;
+        }
+
+    }
+  }
+}

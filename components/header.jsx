@@ -16,12 +16,12 @@ export default function Header() {
   
   return (
     <header className="header__master">
-      <img className="header__logo" src="/assets/AR_Studio.svg" alt="AR Studio" />
+      <Link href="/"><img className="header__logo" src="/assets/AR_Studio.svg" alt="AR Studio" /></Link>
 
       <nav className="header__nav">
         <Link href="#espacio">ESPACIO</Link>
         <a href="https://www.instagram.com/studioar.es/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
-        <a href="#" onClick={abrirCalendly}>RESERVAR</a>
+        <a href="https://calendly.com/ar-studio">RESERVAR</a>
       </nav>
 
       <div className="header__mobile">
