@@ -55,8 +55,66 @@ export default function Home() {  const [verMas, setVerMas] = useState(false)
   return (
     <>
       <Head>
-        <title>AR Studio — Estudio de fotografía en Valencia</title>
-        <meta name="description" content="Estudio de fotografía y creación de contenido con luz natural en Valencia." />
+        <title>AR Studio | Estudio de fotografía con luz natural en Valencia</title>
+        <meta name="description" content="Estudio fotográfico de alquiler en Valencia. Luz natural preciosa y ambiente aesthetic. Reserva online en nuestra web." />
+        <meta name="keywords" content="estudio fotografía Valencia, ciclorama blanco, alquiler estudio fotográfico, grabación en estudio, espacio creativo, luz natural, alquilar estudio en Valencia, que estudio alquilar en Valencia, estudio fotografia cruz cubierta, estudio fotografia Malilla" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Andrés Ortega Montoya" />
+        <meta name="creator" content="Andrés Ortega Montoya" />
+        <meta name="publisher" content="Andrés Ortega Montoya" />
+        <meta name="revisit-after" content="1 days" />
+        <meta name="language" content="es" />
+        <meta name="content-language" content="es" />
+        <meta name="theme-color" content="#594538" />
+
+        {/* Canonical */}
+        <link rel="canonical" href="https://studioar.es/" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="AR Studio | Estudio de fotografía en Valencia con luz natural" />
+        <meta property="og:description" content="Alquila un espacio versátil y luminoso en Valencia para fotografía, vídeo, talleres y contenido visual. Con ciclorama blanco y equipo profesional." />
+        <meta property="og:url" content="https://studioar.es/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://studioar.es/seo/meta-1200x630.jpg" />
+        <meta property="og:site_name" content="AR Studio" />
+        <meta property="og:locale" content="es_ES" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AR Studio | Estudio de fotografía en Valencia con luz natural" />
+        <meta name="twitter:description" content="Reserva tu sesión en un estudio profesional con ciclorama blanco y luz natural. Ideal para fotografía, contenido y grabaciones." />
+        <meta name="twitter:image" content="https://studioar.es/seo/twitter-1200x600.jpg" />
+
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+        {/* Viewport */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {/* JSON-LD estructurado */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "AR Studio",
+              "description": "Alquiler por horas de nuestro estudio de fotografía en Valencia con luz natural y ciclorama blanco.",
+              "url": "https://studioar.es",
+              "image": "https://studioar.es/seo/meta-1200x630.jpg",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Valencia",
+                "addressRegion": "Valencia",
+                "postalCode": "46007",
+                "streetAddress": "C/ de Sant Vicent Màrtir, 338, Jesús"
+              },
+              "telephone": "+34661855612",
+              "priceRange": "€€"
+            })
+          }}
+        />
       </Head>
 
 
