@@ -114,7 +114,7 @@ export default function Home() {  const [verMas, setVerMas] = useState(false)
 
             <div className="datos__map">
 
-              <Image className="map" src="/media/mapa.jpg" alt="mapa del estudio de Arianny Rivas. Todo el espacio medido y explicado para que el cliente pueda comprenderlo antes de ir" loading="lazy" decoding="async" width={300} height={300}></Image>
+              <Image className="map" src="/media/mapa2.jpg" alt="mapa del estudio de Arianny Rivas. Todo el espacio medido y explicado para que el cliente pueda comprenderlo antes de ir" loading="lazy" decoding="async" width={300} height={300}></Image>
 
 
                  <dl className={`datos__list ${verMas ? 'abierto' : 'reducido'}`}>
