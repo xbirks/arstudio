@@ -71,7 +71,7 @@ export default function Home() {  const [verMas, setVerMas] = useState(false)
         <link rel="canonical" href="https://studioar.es/" />
 
         {/* Open Graph */}
-        <meta property="og:title" content="AR Studio | Estudio de fotografía en Valencia con luz natural" />
+        <meta property="og:title" content="AR Studio | Estudio de fotografía en Valencia" />
         <meta property="og:description" content="Alquila un espacio versátil y luminoso en Valencia para fotografía, vídeo, talleres y contenido visual. Con ciclorama blanco y equipo profesional." />
         <meta property="og:url" content="https://studioar.es/" />
         <meta property="og:type" content="website" />
@@ -81,7 +81,7 @@ export default function Home() {  const [verMas, setVerMas] = useState(false)
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AR Studio | Estudio de fotografía en Valencia con luz natural" />
+        <meta name="twitter:title" content="AR Studio | Estudio de fotografía en Valencia" />
         <meta name="twitter:description" content="Reserva tu sesión en un estudio profesional con ciclorama blanco y luz natural. Ideal para fotografía, contenido y grabaciones." />
         <meta name="twitter:image" content="https://studioar.es/seo/twitter-1200x600.jpg" />
 
