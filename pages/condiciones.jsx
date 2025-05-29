@@ -14,12 +14,14 @@ export default function Condiciones() {
 
         <li><strong>No ofrecemos asistencia para la configuración de flashes.</strong> En el apartado de &quot;Equipo&quot;, encontrarás información detallada sobre los flashes y receptores disponibles. Te recomendamos revisar esta información con antelación y tomar las previsiones necesarias.</li>
         <li>Durante la reserva <strong>es obligatorio el uso del suelo PVC transparente</strong> en el fondo, en caso de no querer usarlo se debe abonar la cantidad de 20€ + IVA por metro usado.</li>
+        <li><strong>Está prohibido subirse a las mesas o sofás</strong> con tacones, zapatos o incluso descalzo. La penalización por incumplir esta norma será de 30€ + IVA. Si la mesa principal llega llega a sufrir rayones, quemaduras u otros daños, se deberá cubrir el coste total de la reparación o sustitución por una mesa nueva.</li>
         <li>Se permite el desplazamiento de todo el mobiliario, pero <strong>en ningún caso deberá ser arrastrado</strong>. El incumplimiento de esta condición implicará una penalización de 20€ + IVA.</li>
         <li><strong>En caso de utilizar las plantas, estas deben ser manipuladas con extremo cuidado</strong> y está completamente prohibido arrastrarlas. El incumplimiento de esta condición supondrá una penalización de 20€ + IVA.</li>
         <li>Antes de finalizar su reserva, <strong>el estudio se debe dejar en las mismas condiciones</strong> en las que se entregó.</li>
         <li><strong>El estudio no está insonorizado</strong>, por lo que se puede percibir ruido externo durante la grabación o sesión. No nos hacemos responsables de posibles interferencias sonoras.</li>
         <li>En caso de dañar, manchar o manipular incorrectamente el equipo o mobiliario, <strong>las reparaciones o la reposición deberán correr a cargo del cliente</strong>. En caso de que un equipo esté estropeado o sin arreglo, el cliente se hará cargo de pagar a AR STUDIO el coste total del reemplazo.</li>
-        <li><strong>Solo se puede ingresar al estudio a partir de la hora reservada y la salida debe realizarse en el plazo agendado</strong>. En caso de querer una hora no contratada dependerá de la disponibilidad y el precio es de 45€/h.</li>
+        <li><strong>Solo se puede ingresar al estudio a partir de la hora reservada y la salida debe realizarse en el plazo agendado</strong>. En caso de querer una hora no contratada dependerá de la disponibilidad y el precio es de 50€/h + IVA entre semana y de 60€/h + IVA los fines de semana y festivos.</li>
+        <li>En caso de <strong>superar la hora de salida por 5 minutos</strong>, se cobrará una media hora adicional a un coste de 25€ + IVA entre semana y 30€ + IVA fines de semana.</li>
         <li>Está completamente <strong>prohibido fumar</strong> dentro del estudio.</li>
         <li>Si <strong>cancelas</strong> tu reserva con más de 30 días de antelación, recibirás un 100% de reembolso sobre el importe abonado.</li>
         <li>Si la <strong>cancelación</strong> se realiza entre 30 y 15 días antes de la fecha de la sesión, se reembolsará el 70% del importe abonado.</li>

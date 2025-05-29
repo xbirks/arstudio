@@ -119,11 +119,11 @@ export default function Home() {  const [verMas, setVerMas] = useState(false)
 
                  <dl className={`datos__list ${verMas ? 'abierto' : 'reducido'}`}>
             {/* Primeros 5 elementos siempre visibles */}
-            <dt className="datos__bold" id="espacio">ESPACIO</dt><dd className="datos__normal">76 m2</dd>
+            <dt className="datos__bold" id="espacio">ESPACIO</dt><dd className="datos__normal">89 m2</dd>
             <dt className="datos__bold">TECHO</dt><dd className="datos__normal">3,5 m</dd>
             <dt className="datos__bold">CICLORAMA</dt><dd className="datos__normal">4×3 m</dd>
             <dt className="datos__bold">EQUIPO ILUMINACIÓN</dt>
-            <dd className="datos__normal">GODOX MS300 (x2)<br />NANLINE Forza 150w<br />GODOX ML60Bi 60W con AD-S60s</dd>
+            <dd className="datos__normal">GODOX MS300 (x2)<br />NANLINE Forza 150w</dd>
             <dt className="datos__bold">ACCESORIOS ILUMINACIÓN</dt>
             <dd className="datos__normal">GODOX X2T-S Sony<br />GODOX X2T-C Canon<br />Softbox GODOX (x2)<br />Paraguas</dd>
 
