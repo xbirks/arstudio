@@ -536,6 +536,19 @@ strong{
       
   }
 
+
+  .instagram__grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    img{
+      aspect-ratio: 1/1;
+      width: 100%;
+      height: auto;
+    }
+  }
+
 }
 
 

@@ -231,21 +231,19 @@ export default function Home() {  const [verMas, setVerMas] = useState(false)
 
           <h2>Un espacio<br></br>multifuncional.</h2>
 
-          {mounted && (
-        <>
-          <Script
-            src="https://cdn.lightwidget.com/widgets/lightwidget.js"
-            strategy="afterInteractive"
-          />
-          <iframe
-            src="https://cdn.lightwidget.com/widgets/5e630775b3f953a3a97e88d77f875eca.html"
-            scrolling="no"
-            allowTransparency={true}
-            className="lightwidget-widget"
-            style={{ width: '100%', border: 0, overflow: 'hidden' }}
-          />
-        </>
-      )}
+          <div className="instagram__grid">
+
+            <Image className="datos__portada" src="/media/col5.jpg" alt="Ciclorama y focos Godox en Studio AR en Valencia" loading="lazy" decoding="async" width={600} height={600}></Image>
+
+            <Image className="datos__portada" src="/media/col2.jpg" alt="Interior y mobiliario de Studio AR en Valencia" loading="lazy" decoding="async" width={600} height={600}></Image>
+
+            <Image className="datos__portada" src="/media/col3.jpg" alt="Actividad de yoga en el espacio de AR Studio" loading="lazy" decoding="async" width={600} height={600}></Image>
+
+            <Image className="datos__portada" src="/media/col4.jpg" alt="Modelo posando para venta de producto deportivo" loading="lazy" decoding="async" width={600} height={600}></Image>
+
+          </div>
+
+         
 
         </section>
 
